@@ -12,6 +12,11 @@ function btn() {
       return element.value = '';
     }
     $(code).fadeOut('3000').fadeIn();
+    var length = code.length;
+    var selector = code.value;
+    $('.historial').append(selector_value + '<br>');
+    $('.seleccionados').append(length + '<br>');
+
   } catch(e){
     element.value = '';
   }
