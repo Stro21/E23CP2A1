@@ -1,10 +1,13 @@
 function btn() {
-  var selector = document.getElementById("camposelector").value;
-  if (selector === "") {
-    alert("Debe ingresar un selector jQuery!")
+  var element = document.getElementById("camposelector");
+  var selector_value = element.value;
+  if (selector_value === "") {
+    alert("Debe ingresar un selector jQuery!");
   }
-  else{
-    
+  try {
+    var code = eval(selector_value);
+  } catch(e){
+    console.log("error");
   }
-  console.log(selector)
+  console.log(selector_value);
 }
