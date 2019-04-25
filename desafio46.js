@@ -11,14 +11,16 @@ function btn() {
     if (!code.length) {
       return element.value = '';
     }
-    $(code).fadeOut('3000').fadeIn();
-    var length = code.length;
-    var selector = code.value;
-    $('.historial').append(selector_value + '<br>');
-    $('.seleccionados').append(length + '<br>');
-
+    selection(code, selector_value);
   } catch(e){
     element.value = '';
   }
-  // console.log(selector_value);
+}
+
+function selection(code, value) {
+  code.fadeOut('3000').fadeIn();
+  var length = code.length;
+  var selector = code.value;
+  $('.historial').append(value + '<br>');
+  $('.seleccionados').append(length + '<br>');
 }
