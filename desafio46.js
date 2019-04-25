@@ -15,6 +15,7 @@ function btn() {
   } catch(e){
     element.value = '';
   }
+  return element.value = '';
 }
 
 function selection(code, value) {
