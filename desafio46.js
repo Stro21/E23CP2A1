@@ -1,3 +1,5 @@
+historial = [];
+
 function btn() {
   var element = document.getElementById("camposelector");
   var selector_value = element.value;
@@ -6,8 +8,12 @@ function btn() {
   }
   try {
     var code = eval(selector_value);
+    if (!code.length) {
+      return element.value = '';
+    }
+    $(code).fadeOut('3000').fadeIn();
   } catch(e){
-    console.log("error");
+    element.value = '';
   }
-  console.log(selector_value);
+  // console.log(selector_value);
 }
